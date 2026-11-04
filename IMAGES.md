@@ -12,3 +12,5 @@
 Save your SVG as `public/images/my-art.svg`, then in `src/content/home.js` set:
 `art:'images/my-art.svg', artRatio:'3/4', artTitle:'Your title', artNote:'your caption'`
 Set `artRatio` to the SVG's width/height (e.g. '4/5' or '1/1') so nothing is cropped. Leave `art:''` to get the self-painting demo back.
+
+Hero motion: in src/content/home.js set artMotion:'draw' (SVG traces itself, click to redraw) or 'wipe'. artBg sets the canvas colour behind transparent SVGs.

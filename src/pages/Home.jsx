@@ -3,15 +3,18 @@ import { Link } from 'react-router-dom'
 import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion'
 import c from '../content/home.js'
 import { products } from '../content/shop.js'
+import DrawSvg from '../DrawSvg.jsx'
 import PanelSet from '../PanelSet.jsx'
 import { sets } from '../content/panels.js'
 import { Canvas, Hang, Reveal, Magnet, Brush, LivePainting } from '../ui.jsx'
 
 function HeroArt({b}){
   // Shows hero.art from content/home.js. Missing file -> self-painting demo (+ a helpful note while developing).
-  const [st,setSt]=useState(c.hero.art?'wait':'none'),w='clamp(170px,19vw,270px)'
+  const [k,setK]=useState(0),[st,setSt]=useState(c.hero.art?'wait':'none'),w='clamp(170px,19vw,270px)'
   useEffect(()=>{if(!c.hero.art)return;fetch(c.hero.art).then(r=>setSt(r.ok&&/image|svg/.test(r.headers.get('content-type')||'')?'ok':'missing')).catch(()=>setSt('missing'))},[])
   if(st==='wait') return <div style={{width:w,aspectRatio:c.hero.artRatio}}/>
+  if(st==='ok'&&c.hero.artMotion==='draw') return <div className="canvas live" onClick={()=>setK(k+1)} title="Click to redraw" style={{width:w,aspectRatio:c.hero.artRatio,background:c.hero.artBg,overflow:'hidden'}}>
+    <DrawSvg key={k} src={c.hero.art} delay={k?0:b+.6}/><div className="weave"/><small className="repaint" style={{color:'#3a0d12'}}>click to redraw</small></div>
   if(st==='ok') return <motion.div className="canvas" style={{width:w,aspectRatio:c.hero.artRatio,overflow:'hidden'}} initial={{clipPath:'inset(0 100% 0 0)'}} animate={{clipPath:'inset(0 0% 0 0)'}} transition={{delay:b+.9,duration:1.4,ease:'easeInOut'}}>
     <img src={c.hero.art} alt="" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/></motion.div>
   return <><LivePainting w={w}/>{import.meta.env.DEV&&st==='missing'&&<small className="warn">Could not load "{c.hero.art}". Put the file in luce-canvas/public/images/ (top level, not inside src), then restart npm run dev.</small>}</>
