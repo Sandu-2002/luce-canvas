@@ -1,6 +1,8 @@
 // DRAFT: Home page
 export default {
-  hero:{kicker:'Original canvas paintings',title:['Paintings','that hold','the light.'],text:'Warm reds and golden yellows, stretched by hand. Choose a piece, or upload your own photo and see it hang on your wall.',cta1:'Shop paintings',cta2:'Preview your photo'},
+  hero:{kicker:'Original canvas paintings',title:['Paintings','that hold','the light.'],text:'Warm reds and golden yellows, stretched by hand. Choose a piece, or upload your own photo and see it hang on your wall.',cta1:'Shop paintings',cta2:'Preview your photo',
+    // Middle hero canvas. Leave art:'' for the self-painting demo, or set your SVG/image: art:'images/my-art.svg'
+    art:'images/my-art.svg',artRatio:'3/4',artTitle:'Paint it live',artNote:'click the canvas'},
   marquee:'HAND-STRETCHED · GALLERY-WRAPPED · MADE TO ORDER · SHIPS WORLDWIDE · ',
   featuredTitle:'Fresh off the easel',
   panelsTitle:'Panel wall sets',panelsText:'One picture, split across several canvases. Hang them with gaps like a gallery.',panelsCta:'See all panel sets',
