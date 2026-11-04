@@ -12,3 +12,4 @@
 Save while `npm run dev` runs and the browser updates instantly.
 | Colours / palettes | src/content/theme.js |
 | Panel wall sets (layouts, sets, prices) | src/content/panels.js (artwork: src/scenes.js) |
+| How to change images | IMAGES.md |

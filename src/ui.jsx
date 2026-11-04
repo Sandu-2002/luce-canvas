@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
-export const Canvas=({a,w=220,className='',...p})=><motion.div className={'canvas '+className} style={{width:w,background:a.img?`url(${a.img}) center/cover`:a.bg}} {...p}><div className="weave"/></motion.div>
+export const Canvas=({a,w=220,className='',style,...p})=><motion.div className={'canvas '+className} style={{width:w,background:a.img?`url(${a.img}) center/cover`:a.bg,...style}} {...p}><div className="weave"/></motion.div>
 // A canvas hanging from a wire: swings like a pendulum when it appears and when hovered
 export const Hang=({children,delay=0,className='',style})=><motion.div className={'hang '+className} style={{transformOrigin:'50% 0',...style}}
   initial={{rotate:-9,y:-60,opacity:0}} animate={{rotate:0,y:0,opacity:1}} transition={{type:'spring',stiffness:35,damping:4,delay}}

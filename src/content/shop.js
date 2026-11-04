@@ -1,4 +1,4 @@
-// DRAFT: products. Add real photos: put files in /public and add  img:'/ember-tide.jpg'
+// DRAFT: products. To use a real photo: save it in public/images/ and add  img:'images/ember-tide.jpg'  to the painting (see IMAGES.md)
 export const products=[
  {id:'ember-tide',title:'Ember Tide',collection:'Ember',size:'24×36 in',price:240,desc:'A wave of fire rolling into night.',bg:'linear-gradient(160deg,#ffd45c,#ff6a2b 45%,#7a0d1c)'},
  {id:'golden-hour-fold',title:'Golden Hour Fold',collection:'Saffron',size:'18×24 in',price:160,desc:'Light folding over itself at 6pm.',bg:'radial-gradient(circle at 30% 30%,#ffe27a,#e8452c 50%,#2a0508)'},
