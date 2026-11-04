@@ -6,7 +6,7 @@ export const layouts={
 }
 // To use your own artwork: save it in public/images/ and add  img:'images/my-set.jpg'  to a set (see IMAGES.md). Wide photos (5:3) cut best.
 export const sets=[
- {id:'set-sunset-savanna',title:'Sunset Savanna',layout:'five',scene:'sav',pieces:5,size:'5 × 12×30 in',price:380,bg:'linear-gradient(160deg,#ffd23a,#ff7a1a 50%,#8a1a0c)'},
- {id:'set-blossom-moon',title:'Blossom Moon',layout:'three',scene:'moon',pieces:3,size:'3 × 16×32 in',price:260,bg:'linear-gradient(160deg,#6cc3bf,#e9a928)'},
- {id:'set-ember-waves',title:'Ember Waves',layout:'four',scene:'wave',pieces:4,size:'4 × 14×30 in',price:320,bg:'linear-gradient(160deg,#ffb627,#e0301e 60%,#3a0d12)'}]
+ {id:'set-sunset-savanna',title:'Sunset Savanna',layout:'five',scene:'sav',pieces:5,size:'5 × 12×30 in',price:380,bg:'linear-gradient(160deg,#ffd23a,#ff7a1a 50%,#8a1a0c)' , img:'images/d1-5.jpg'},
+ {id:'set-blossom-moon',title:'Blossom Moon',layout:'three',scene:'moon',pieces:3,size:'3 × 16×32 in',price:260,bg:'linear-gradient(160deg,#6cc3bf,#e9a928)', img:'images/d1-2.jpg'},
+ {id:'set-ember-waves',title:'Ember Waves',layout:'four',scene:'wave',pieces:4,size:'4 × 14×30 in',price:320,bg:'linear-gradient(160deg,#ffb627,#e0301e 60%,#3a0d12)', img:'images/d1-8.jpg'}]
 export const panelText={title:'Panel Sets',hint:'Hover a set to spread the panels apart, like a real gallery wall.'}
