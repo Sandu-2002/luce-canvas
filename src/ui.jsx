@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion'
-import c from '../content/site.js' // Check your content file name here (e.g. site.js)
+import c from './content/site.js' 
 import { products } from '../content/shop.js'
 import PanelSet from '../PanelSet.jsx'
 import { Canvas, Hang, Reveal, Magnet, Brush, LivePainting } from '../ui.jsx'
