@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion'
 import c from './content/site.js' 
-import { products } from '../content/shop.js'
-import PanelSet from '../PanelSet.jsx'
+import { products } from './content/shop.js'
+import PanelSet from './PanelSet.jsx'
 import { Canvas, Hang, Reveal, Magnet, Brush, LivePainting } from '../ui.jsx'
 
 function Float({ mx, my, d, children, style }) {
