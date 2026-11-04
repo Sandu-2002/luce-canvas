@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion'
-import c from '../content/home.js'
+import c from '../content/site.js' // Check your content file name here (e.g. site.js)
 import { products } from '../content/shop.js'
 import PanelSet from '../PanelSet.jsx'
 import { Canvas, Hang, Reveal, Magnet, Brush, LivePainting } from '../ui.jsx'
 
-function Float({mx, my, d, children, style}) {
+function Float({ mx, my, d, children, style }) {
   const x = useTransform(mx, [-.5, .5], [-d, d])
   const y = useTransform(my, [-.5, .5], [-d, d])
   return <motion.div style={{ x, y, ...style }}>{children}</motion.div>
